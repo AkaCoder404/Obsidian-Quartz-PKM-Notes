@@ -3,10 +3,11 @@ title: Welcome!
 ---
 # My Second Brain
 
-Welcome to my second brain! Here is a collection of my notes mainly in Computer Science. 
+Welcome to my second brain! Here is a collection of my notes. Notes are mainly about computer science related topics, including machine learning, neural networks, data analysis, etc.
 
 ## Notable Pages
-Here is a collection of my notable pages.
+Here is a collection of my notable pages that you can jump to.
+- [[Home]]
 - [[Data Science]]
 - [[Neural Networks]]
 - [[Convolutional Neural Network]]

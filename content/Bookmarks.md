@@ -1,11 +1,9 @@
-# Bookmarks
-A collection of good resources
+# 🔖 Bookmarks
+A collection of good resources for everything...
 
 
 ## Machine Learning, Deep Learning, and AI
 - 深度学习经典、新论文逐段精读 https://github.com/mli/paper-reading
-
-
 
 
 ## Newsletters
