@@ -221,23 +221,6 @@ The 6 R's - https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-mi
 This is not a complete list! A more complete list can be found here [link]().
 ### Compute
 Compute as a service (CaaS) model
-
-**Payment Options**
-- **On-demand** - only pay for the duration the instance runs for 
-- **Saving's plan** - low prices in exchange for consistent amount of usage measured in dollars per hour for a one or three year term (up to 72%) 
-- **Reserved Instance** - suited for steady-state workloads or ones with predictable usage and offer you up to a 75 versus On-Demand pricing. You qualify for a discount once you comit to a one or a three-year term and can pay for them with three payment options (all upfront, partial upfront, and no upfront). Require you to specify instance family and size, platform, tenancy, and region. Reserved Instances are a billing discount that is applied to the use of On-Demand Instances in an AWS account. A business can purchase Standard Reserved and Convertible Reserved Instances for a 1-year or 3-year term. Unlike EC2 Instance Savings Plans, Reserved Instances do not require an hourly spend commitment over the duration of the contract term - stndard reserve instances allows you to modify the AZ, scope, networking type, and instance size (within the same instance type)
-- **Convertible Reserved Instance** - enables you to exchange one or more convertible reserved instances for another convertible reserved instance with a different configuration, including instance family, operaing systems, and tenancy
-- **Spot Instances** - allow you to request spare Amazon EC2 computing capacity for up to 90% off of the O-nDemand price. The catch here is that AWS can reclaim the instance at any time they need it, giving you a two-minute warning to finish up work and save state. You can always resume later if needed. So when choosing Spot Instances, make sure your workloads can tolerate being interrupted. A good example of those are batch workloads, access to unused EC2 capacit
-- **Dedicated Hosts** - Physical hosts dedicated for your use of EC2. 
-**Scaling Amazon EC2**
-- Scalability and Elasticity - growth and shrink of capacity
-- Amazon EC2 Auto Scaling enables you to automatically add or remove Amazon EC2 instances in response to changing application demand.
-	- Dynamic Scaling responses to changing demand
-	- Predictive Scaling automatically schedules the right number of Amazon EC2 instances based on predicted demand.
-	- Minimum, Desired, and Maximum Capacity
-- Scaling Up -> more power to the machines that are running.
-- Scale out -> 
-
 - **Elastic Compute Cloud** (EC2) - EC2 service allows to work with virtual servers that provide the raw compute capacity to host application needs.
 	- **Configuration**
 		- Operating System
@@ -246,7 +229,7 @@ Compute as a service (CaaS) model
 		- Networking
 	- **Types of Instances** - Each Amazon EC2 instance type is grouped under an instance family based on task, offering different variations of cpu, memory, networking resources.
 		- **General Purpose** - balanced, diverse workloads
-		- **Compute optimized** - compute intensive tasks - gaming servers, hpc, scientific modeling, batch processing
+		- **Compute optimized** - compute intensive tasks - gaming servers, HPC, scientific modeling, batch processing
 		- **Memory optimized** - memory intensive 
 		- **Accelerated Computing** - floating point number calc, graphics processing, data pattern matching
 		- **Storage Optimized**  - high performance for locally stored dat
@@ -254,6 +237,8 @@ Compute as a service (CaaS) model
 		- **On-demand**
 		- **Savings Plan**
 		- **Reserved**
+			- Standard Reserved
+			- Convertible Reserved
 		- **Spot Instance**
 		- **Dedicated Hosts**
 - **AWS Lambda** - AWS Lambda is a serverless option with following steps (1) upload your code into what is called a lambda function (2) configure a trigger, and the service waits for trigger (3) When trigger is detected, the code is run in a managed environment (automatically scalable, managed by AWS). Meant for programs under 15 mins (4) pay only for the **compute time you use** and the number of **requests to your functions** It provides per millisecond pricing of the code, and can run on either on schedule or in response to events. Like EC2, also has **savings plan**
@@ -268,7 +253,10 @@ Compute as a service (CaaS) model
 - **Amazon Elastic Block Store** - Storage devices that can be attached to EC2 instances that are separated from Instance Stores Volumes and not attached to the host EC2 instance is on, it can **persist** and comes in all different types sizes and other configurations. **Reduce cost by deleting snapshots and type of volume**, automatically replicated in AZ. Does **not** automatically scale.
 - **Amazon Elastic File System (EFS)** - A **managed** file systems, multiple instances can access the data in EFS at the same time (multi instance read and write, **redundantly stored across activity zones** and **automatically scales** 
 - **Amazon FSx** - Amazon FSx provides fully **managed** (shared) third-party file systems with the native compatibility and feature sets for workloads such as high-performance computing (HPC), machine learning, media data processing, and financial modeling. Amazon FSx is designed to offer high levels of throughput, IOPS, and consistent low latencies. Currently, Amazon FSx supports several file system options, Lustre, WFS, ONTAP, and ZFS.
-- **Amazon Simple Storage Service (Amazon S3)** store and retrieve an **unlimited** amount of data. There fore **automatically scales** in size. Data is stored as objects in buckets (i.e file is object, bucket is file directory). Each object has a **maximum object size** of 5TB.   You can create multiple buckets, give permissions to each objects. S3 is the most cost effective option to store static images, because you only pay for what you use. **It's also good for hosting static websites**. It also automatically scales in **throughput**.
+- **Amazon Simple Storage Service (Amazon S3)** - S3 is an object based storage.  Data is stored as objects in buckets (i.e file is object, bucket is file directory), where the object contains not only the data (value), but a key, version ID, and metadata.
+	- You can store and retrieve an **unlimited** amount of data. But each object has a **maximum object size** of 5TB.  
+	- **Automatically scales** in size.  You can create multiple buckets, give permissions to each objects. S3 is the most cost effective option to store static images, because you only pay for what you use. **It's also good for hosting static websites**. It also automatically scales in **throughput**.
+	- S3 is a universal namespace so bucket names must be unique.
 	- **Other Concepts**
 		- **Lifecycle Policies** - Set rules to transition objects to different storage classes, automatically move data between tiers
 		- **Bucket Versioning** - Bucket versioning gives you the ability to maintain multiple versions of an object in an S3 bucket. 

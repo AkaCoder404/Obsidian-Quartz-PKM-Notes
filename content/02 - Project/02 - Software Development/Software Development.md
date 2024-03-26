@@ -61,6 +61,9 @@ by using an agile approach with epics, you start small, iterate, measure, manage
 - report your prgoress
 
 # 01 DevOps
+Here, we understand the general development cycle of an application.
+
+
 ***What is DevOps?***
 A methodology that helps engineering teams build better products by continuously integrating user feedback.
 
@@ -121,6 +124,12 @@ Workflow iwthout TDD? (1) choose something to work on (2) build it based on spec
 With (1) choose something to work on (2) write tests that would pass if product works (3) keep building until all tests pass
 
 TDD forces you to priortize tasks to ensure no major issues are seen by customers.
+
+Should have a test priority!
+1. High value features
+2. Edge cases in high value features
+3. Things that are easy to break
+4. Basic React component testing
 
 >[!note] Devops is an end goal for an organization! 
 >For example, a new startup with no users building a web application doesn't necessarily need deployment automation and application performance management, instead a simple stack of GitHub, Netfily/Vercel, and LayerCI would suffice. On another hand, a team building an application for 10 enterprise users, who are more sensitive sensitive to downtime, and require test coverage and business hours alerting should be priorities. Example stack includes GitHub, Sentry, PagerDuty, CodeCov, Bitrise
