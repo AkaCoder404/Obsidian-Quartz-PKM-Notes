@@ -15,8 +15,10 @@ banner_y: 0.4705
 	- [[#01 Probability#01.03 Distributions|01.03 Distributions]]
 - [[#02 Random Variables|02 Random Variables]]
 ## 00 Background
+
 ***Books***
-- 
+
+#TODO Statistically significant?
 
 **Roadmap**
 - MLE, MAP, Maximum Likelihood Loss

@@ -6,15 +6,30 @@ A collection of good resources for everything...
 - 深度学习经典、新论文逐段精读 https://github.com/mli/paper-reading
 
 
-## Newsletters
+## 🏫 MOOCs
+- MIT Open Courseware https://ocw.mit.edu
+- John Hopkins MOOCs https://provost.jhu.edu/about/digital-initiatives/moocs/courses/
+- 中国大学MOOC https://www.icourse163.org
+- Youtube
+- Coursera
+- Amazon Skillbuilder
+## 🌐 Online Documents
+- [Dive into Deep Learning](https://d2l.ai/chapter_preface/index.html) ⭐️⭐️⭐️⭐️⭐️
+
+## 📖 Books
+**Computer Science**
+- Data Science Books
+- Machine Learning Books
+- Deep Learning
+- Software Development
+	- Clean Code....
+
+## 📰 Newsletters
 - [Starter Story](https://www.starterstory.com)
 
-## Learning
-MIT Open Courseware https://ocw.mit.edu
-
-## Software Development
-
-
+## 🪀 Fun
+- https://monkeytype.com/
+- FiveThirtyEight
 ### Code Better
 - [Documenting Python Code and Projects](https://testdriven.io/blog/documenting-python/)
 ### Flutter

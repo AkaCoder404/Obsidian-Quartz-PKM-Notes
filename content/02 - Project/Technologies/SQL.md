@@ -1,0 +1,12 @@
+# SQL
+
+Operation Order
+```
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+LIMIT
+```
