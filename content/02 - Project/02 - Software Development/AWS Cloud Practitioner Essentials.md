@@ -299,6 +299,7 @@ Compute as a service (CaaS) model
 ### Network
 - **Amazon Virtual Private Cloud (VPC)** - Amazon Virtual Private Cloud  allows you to provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. These resources can be public facing so they have access to the internet, or private with no internet access. public vs private subnet. allows you define private ip range for AWS resources, subnets allow you to group services together. subnets must stay entirely within one availability zone
 	- **Site-to-Site VPN** - Site-to-Site VPN creates encrypted tunnels between your network and your Amazon Virtual Private Clouds or AWS Transit Gateways. Requires **Customer Gateway** and **Transit Gateway**
+	- 
 	- **Client VPN**
 	- **Peering Connection** - A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses. **Not** good for managing many VPC to VPC connections. Instead, use **AWS Transit Gateway**.
 - **Direct Connect** - Private, dedicated fiber connection between (on premises network) data center and to AWS Cloud (VPC), however communication is not encrypted!
@@ -317,6 +318,7 @@ Compute as a service (CaaS) model
 - **AWS Security Hub**
 - **Amazon Firewall Manager** - AWS Firewall Manager is a security management service that allows you to centrally configure and manage firewall rules across your accounts and applications in AWS Organizations. As new applications are created, Firewall Manager makes it easier to bring new applications and resources into compliance by enforcing a common set of security rules.
 - **Amazon Network Firewall** -  AWS Network Firewall allows you to define firewall rules that provide fine-grained control over network traffic. Network Firewall works together with AWS Firewall Manager so you can build policies based on Network Firewall rules and then centrally apply those policies across your virtual private clouds (VPCs) and accounts.
+	- Also performs traffic flow inspection and traffic filtering.
 - **Amazon Cloud Directory** - Amazon Cloud Directory allows the organization of hierarchies of data across multiple dimensions.
 - **AWS Directory Service** - Microsoft Active Directory, also known as AWS Managed Microsoft AD, enables your directory-aware workloads and AWS resources to use managed Active Directory in the AWS Cloud.
 - **AWS CloudHSM** - AWS CloudHSM is a cloud-based hardware security module (HSM) that enables you to easily generate and use your own encryption keys on the AWS Cloud.
@@ -328,7 +330,7 @@ Compute as a service (CaaS) model
 
 
 ### Analytics
-- **Amazon Athena** - Amazon Athena is a serverless, interactive analytics service that provides a simplified and flexible way to analyze petabytes of data where it lives.
+- **Amazon Athena** - Amazon Athena is a serverless, interactive analytics service that provides a simplified and flexible way to analyze petabytes of data where it lives (for example, query on S3 data directly). It is good for both complex and simple queries.
 -  **Amazon QuickSight** - QuickSight is a business intelligence service that delivers insights with dashboards.  
 - **Amazon Elastic MapReduce (EMR)** - Amazon EMR is a cloud big data platform for running large-scale distributed data processing jobs, interactive SQL queries, and machine learning applications. Fully managed.
 - **AWS Data Exchange** - Data Exchange allows you to easily find, subscribe to, and use third-party data in the cloud. Basically a Data Marketplace.

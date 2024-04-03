@@ -11,7 +11,7 @@ banner_y: 0.4705
 ```table-of-contents
 ```
 
-## 01 Background
+# 00 Background
 
 ## Resources
 **Books**
@@ -24,7 +24,7 @@ banner_y: 0.4705
 - 📖 (2015) DevOps in Practice
 - 📖 (2010) Continuous Delivery
 - 📹 DevOps Engineering Course for Beginners https://www.youtube.com/watch?v=j5Zsa_eOXeY ⭐️⭐️⭐️⭐️
-- 
+
 
 **Certifications**
 - Cloud Certified
@@ -34,7 +34,8 @@ banner_y: 0.4705
 
 **Documentation**s
 # 02 Technologies
-## Current Core Technologies
+**Current Core Technologies**
+Here is a summary of common core technologies...
 - Development: Git/Github/Gitlab
 - Build:
 - Testing: Github Actions, Bitrise, LayerCI, CircleCI
@@ -47,22 +48,32 @@ banner_y: 0.4705
 Jenkins (CI and CD)
 
 **Frameworks**
+- [[React]]
 - [[React Native]]
 - [[Swfit]]
-
+- [[Nodejs]]
 # 03 Practices
-- user stories
+
 ## Agile Software Development
+- user stories
 -  epics (work that can be broken down into specific tasks)
 
 by using an agile approach with epics, you start small, iterate, measure, manage, and scale. With this approach, you do the following.
 - Structure your work in the form of epics and stories to be able to respond to change
 - produce a well-prioritized backlog
-- report your prgoress
+- report your progress
+
+#todo The importance of 
+
+### SCRUM
+
+
+### Lean
+
+
 
 # 01 DevOps
-Here, we understand the general development cycle of an application.
-
+Here, we understand the general development cycle of an application. 
 
 ***What is DevOps?***
 A methodology that helps engineering teams build better products by continuously integrating user feedback.
@@ -76,10 +87,6 @@ Here are the pillers of DevOps engineering.
 - pull request automation
 - deployment automation
 - application performance management
-- 
-
-
-
 
 **Pull Request Automation**
 - Developers share code changes using version control systems.
@@ -114,6 +121,18 @@ Ops
 3. Operate - scaling, architectural problems
 4. Monitor - 
 
+## Development (Dev)
+
+### Plan
+Reference [[#Agile Software Development]]
+
+### Code
+Version control...
+
+### Build
+
+
+### Test
 **Test Driven Development Definition** (TDD)
 - TDD - tests are written before code is written
 - Unit Tests - ensure individual components work on their own
@@ -131,6 +150,54 @@ Should have a test priority!
 3. Things that are easy to break
 4. Basic React component testing
 
+## Operations (Ops)
+
+### Release and Deploy (Continuous Deployment)
+
+## Deployment Strategies
+Deploying - virtual machines (VMs) and Containers - to linux
+
+The big change for moving programs into containers or VMs is that each will have its own versions of shared resourecs like files and network ports
+
+With
+- resource sharing
+- environments (different versions of files)
+- conflicting gwebsevers listening to the same port
+
+sandbox or isolated
+
+**Rolling Deployments**
+Strategy to deploy a new version of an application without causing douwntime. They work by creating a single intance of the new version of an application, then shutting off one instance of the old version until all intances have been upgrade. 
+
+Benefits
+- well supported
+- no huge bursts
+- easily reverted
+
+Cons
+- Speed
+- API Compatability
+
+**Blue/Green Deployment**
+Starting an entirely new instance of an application and then routing traffic over to it.
+
+Benefits
+- Easy to understand, powerful, extendable to workflows
+COns: Difficult to make hotfixes, resources allocation is not convenient, clusters can affect each other
+
+Rainbow Deployments
+
+
+Acceptance Test
+New version of the app could be tested against the production database in the very environment which will soon become production. Tested by QA
+
+Canary Deployments
+
+### Operate and Monitor
+
+
+
+
 >[!note] Devops is an end goal for an organization! 
 >For example, a new startup with no users building a web application doesn't necessarily need deployment automation and application performance management, instead a simple stack of GitHub, Netfily/Vercel, and LayerCI would suffice. On another hand, a team building an application for 10 enterprise users, who are more sensitive sensitive to downtime, and require test coverage and business hours alerting should be priorities. Example stack includes GitHub, Sentry, PagerDuty, CodeCov, Bitrise
 
@@ -146,8 +213,6 @@ CI is a vital tool for developer collaboration, Increase collaboration, prevent 
 
 **Branch Based**
 Github..
-
-***SCRUM***
 
 
 **Code Coverage Definition**
@@ -227,45 +292,6 @@ Difficulties
 - 
 CI/CD is merged with ephermeral environments to form a unified CI/CD and review process for every commit.
 
-## Deployment Strategies
-Deploying - virtual machines (VMs) and Containers - to linux
-
-The big change for moving programs into containers or VMs is that each will have its own versions of shared resourecs like files and network ports
-
-With
-- resource sharing
-- environments (different versions of files)
-- conflicting gwebsevers listening to the same port
-
-sandbox or isolated
-
-
-**Rolling Deployments**
-Strategy to deploy a new version of an application without causing douwntime. They work by creating a single intance of the new version of an application, then shutting off one instance of the old version until all intances have been upgrade. 
-
-Benefits
-- well supported
-- no huge bursts
-- easily reverted
-
-Cons
-- Speed
-- API Compatability
-
-**Blue/Green Deployment**
-Starting an entirely new instance of an application and then routing traffic over to it.
-
-Benefits
-- Easy to understand, powerful, extendable to workflows
-COns: Difficult to make hotfixes, resources allocation is not convenient, clusters can affect each other
-
-Rainbow Deployments
-
-
-Acceptance Test
-New version of the app could be tested against the production database in the very environment which will soon become production. Tested by QA
-
-Canary Deployments
 
 ## AutoScaling
 Automates horizontal scaling to ensure that the number of workers (enough resources) is porportional to the load on the system  
